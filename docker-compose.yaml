@@ -2,6 +2,8 @@ version: '3'
 services: 
   mysql_db_container:
     image: 'mysql'
+    command:
+      - --sort_buffer_size=1073741824
     ports: 
       - '3306:3306'
     environment: 
